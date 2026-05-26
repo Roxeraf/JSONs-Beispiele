@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "5b9f009d-67b3-42c7-976c-1cb9c841ff14",
     "name": "Monari [TEST]",
-    "description": "OpenAPI documentation for the external systems interface.\n\n## Explanation of the description notation:\n\nIn the description, the designations **POST\\[\\], PATCH\\[\\]** and **GET\\[\\]** can be found in a uniform structure. The \\[X\\] in the square brackets means that this field is used in **POST/PATCH** or **GET**, depending on where the X was set.  \nIf it is a _readOnly_ field, then an **X** is set in the **GET** and is not used in **POST** or/and **PATCH**. The default is when **POST** and **PATCH** are _writeOnly_ (i.e. the field is used in both).  \nIn this case, the description is left empty.\n\n<u><b>Structure for link fields:</b></u>  \n**Link field:** _Alias, UUID_ | **<**Where to link to(name)**\\>** It is linked via an _Alias_ or a _UUID_.\n\nContact Support:  \nEmail: [info@pure-lox.com](https://mailto:info@pure-lox.com)",
+    "description": "OpenAPI documentation for the external systems interface.\n\n## Explanation of the description notation:\n\nIn the description, the designations **POST\\[\\], PATCH\\[\\]** and **GET\\[\\]** can be found in a uniform structure. The \\[X\\] in the square brackets means that this field is used in **POST/PATCH** or **GET**, depending on where the X was set.  \nIf it is a _readOnly_ field, then an **X** is set in the **GET** and is not used in **POST** or/and **PATCH**. The default is when **POST** and **PATCH** are _writeOnly_ (i.e. the field is used in both).  \nIn this case, the description is left empty.\n\n<u><b>Structure for link fields:</b></u>  \n**Link field:** _Alias, UUID_ | **<**Where to link to(name)**\\>** It is linked via an _Alias_ or a _UUID_.\n\nContact Support:  \nEmail: [info@system-provider.com](https://mailto:info@system-provider.com)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "40356664"
   },
@@ -379,7 +379,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/MF-Test-Item-02/",
+              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/TEST-ITEM-02/",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -395,7 +395,7 @@
                 "client",
                 ":client",
                 "item-master",
-                "MF-Test-Item-02",
+                "TEST-ITEM-02",
                 ""
               ],
               "variable": [
@@ -565,7 +565,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"item_type\": null,\n    \"designation_a\": {\"en\":\"Testartikel Helion\"},\n    \"base_quantity_unit\": null,\n    \"stock_characteristic_profile\": null\n}",
+              "raw": "{\n    \"item_type\": null,\n    \"designation_a\": {\"en\":\"Test Product Sample\"},\n    \"base_quantity_unit\": null,\n    \"stock_characteristic_profile\": null\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -574,7 +574,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/YKHO-022-API_Mit_18Items/",
+              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/TST-COLL-001/",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -590,7 +590,7 @@
                 "client",
                 ":client",
                 "item-master",
-                "YKHO-022-API_Mit_18Items",
+                "TST-COLL-001",
                 ""
               ],
               "variable": [
@@ -759,7 +759,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\n    \"designation_a\":\"Briquettes de bois\"\n    \n}",
+              "raw": "{\n\n    \"designation_a\":\"Generic Product Description\"\n    \n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -938,7 +938,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/MF-Test-Item-00/",
+              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/TEST-ITEM-00/",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -954,7 +954,7 @@
                 "client",
                 ":client",
                 "item-master",
-                "MF-Test-Item-00",
+                "TEST-ITEM-00",
                 ""
               ],
               "variable": [
@@ -4272,7 +4272,7 @@
                 },
                 {
                   "key": "client",
-                  "value": "DS-Online-Versandhandel"
+                  "value": "DEMO-CLIENT"
                 },
                 {
                   "key": "itemMasterNumber",
@@ -4342,7 +4342,7 @@
                 {
                   "key": "client",
                   "value": "{{client}}",
-                  "description": "\nDS-Online-Versandhandel"
+                  "description": "\nDEMO-CLIENT"
                 }
               ]
             },
@@ -4537,7 +4537,7 @@
                 {
                   "key": "client",
                   "value": "{{client}}",
-                  "description": "\nDS-Online-Versandhandel"
+                  "description": "\nDEMO-CLIENT"
                 }
               ]
             },
@@ -6203,7 +6203,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_number\": \"ds-french-90-01-2025\",\n    \"site\": \"DS-Musterlager\",\n    \"order_control_code_a\": \"DS:WA-Vollpalette\",\n    \"client\": \"DS-Online-Versandhandel\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": \"150\",\n            \"reference\": {\n                \"reference_value\": \"#DefaultCompany\",\n                \"reference_key\": \"HYPE\"\n            }\n        }\n    ]\n}",
+              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_number\": \"ds-french-90-01-2025\",\n    \"site\": \"DS-Musterlager\",\n    \"order_control_code_a\": \"DS:WA-Vollpalette\",\n    \"client\": \"DEMO-CLIENT\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": \"150\",\n            \"reference\": {\n                \"reference_value\": \"#DefaultCompany\",\n                \"reference_key\": \"HYPE\"\n            }\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6925,7 +6925,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"client\": \"DS-Online-Versandhandel\",\n    \"site\": \"DS-Musterlager\",\n    \"order_number\": \"DSPA-TEST-API-5000\",\n    \"order_control_code_a\": \"DS-WE\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"order_position_type\": \"0\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": 150\n        }\n    ]\n}",
+              "raw": "{\n    \"client\": \"DEMO-CLIENT\",\n    \"site\": \"DS-Musterlager\",\n    \"order_number\": \"TEST-API-5000\",\n    \"order_control_code_a\": \"DS-WE\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"order_position_type\": \"0\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": 150\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6960,7 +6960,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "DSPA-TEST-API-5000"
+                  "value": "TEST-API-5000"
                 }
               ]
             },
@@ -7320,7 +7320,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "DSPA-TEST-07-03-2025"
+                  "value": "TEST-07-03-2025"
                 }
               ]
             },
@@ -7485,7 +7485,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "DSPA-TEST-07-03-2025"
+                  "value": "TEST-07-03-2025"
                 }
               ]
             },
@@ -9593,7 +9593,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"client\": \"DS-Online-Versandhandel\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-111\",\n        \"order_control_code_a\": \"DS:Blocklager\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n          \"references\": [\n      {\n        \"reference_key\": \"Bild\",\n        \"reference_value\": \"Bild\"\n      }\n    ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth005\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 150,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"DS-0901-french\",\n                            \"client\": \"DS-Online-Versandhandel\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"DS-0901-french\"\n                        }\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-111\",\n        \"order_control_code_a\": \"DS:Blocklager\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n          \"references\": [\n      {\n        \"reference_key\": \"Bild\",\n        \"reference_value\": \"Bild\"\n      }\n    ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth005\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 150,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"DS-0901-french\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"DS-0901-french\"\n                        }\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -9770,7 +9770,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"client\": \"DS-Online-Versandhandel\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-333\",\n        \"order_control_code_a\": \"DS-WE\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n        \"references\": [\n            {\n                \"reference_key\": \"Bild\",\n                \"reference_value\": \"Bild\"\n            }\n        ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth008\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 1,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"TP: 1012_DSPA\",\n                            \"client\": \"DS-Online-Versandhandel\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"Volle Pal. Ziegelsteine\",\n                            \"stock_value_a\": \"85800\"\n                        },\n                        \"serial_numbers\": [\n                            {\n                                \"serial_number\": \"85800\"\n                            }\n                        ]\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-333\",\n        \"order_control_code_a\": \"DS-WE\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n        \"references\": [\n            {\n                \"reference_key\": \"Bild\",\n                \"reference_value\": \"Bild\"\n            }\n        ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth008\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 1,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"TP: 1012_DSPA\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"Volle Pal. Ziegelsteine\",\n                            \"stock_value_a\": \"85800\"\n                        },\n                        \"serial_numbers\": [\n                            {\n                                \"serial_number\": \"85800\"\n                            }\n                        ]\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -9947,7 +9947,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"handling_unit_number\": \"HU-DSPA-TEST\",\n        \"handling_unit_class\": \"avis-handling-unit\",\n        \"handling_unit_type\": \"TP: EPAL\",\n        \"site\": \"DS-Musterlager\",\n        \"length\": 30,\n        \"width\": 20,\n        \"height\": 15,\n        \"volume\": 9000,\n        \"storage_zone\":\"DS:Wareneingang\",\n        \"storage_location\": \"DS:WE-Out\",\n        \"handling_unit_positions\": [\n            {\n                \"position_id\": 1,\n                \"position_number\": \"1\",\n                \"quantity\": 150,\n                \"quant\": {\n                    \"item\": \"TP: 1012_DSPA\",\n                    \"client\": \"DS-Online-Versandhandel\",\n                    \"quantity_unit\": \"TP: Stück\",\n                    \"storage_date\": \"2022-01-31T00:00:00.000000Z\"\n                }\n            }\n        ],\n        \"handling_unit_identifications\": [\n            {\n                \"handling_unit_identification_type\": \"SSCC\",\n                \"handling_unit_identification\": \"HU69000512\"\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"handling_unit_number\": \"HU-DSPA-TEST\",\n        \"handling_unit_class\": \"avis-handling-unit\",\n        \"handling_unit_type\": \"TP: EPAL\",\n        \"site\": \"DS-Musterlager\",\n        \"length\": 30,\n        \"width\": 20,\n        \"height\": 15,\n        \"volume\": 9000,\n        \"storage_zone\":\"DS:Wareneingang\",\n        \"storage_location\": \"DS:WE-Out\",\n        \"handling_unit_positions\": [\n            {\n                \"position_id\": 1,\n                \"position_number\": \"1\",\n                \"quantity\": 150,\n                \"quant\": {\n                    \"item\": \"TP: 1012_DSPA\",\n                    \"client\": \"DEMO-CLIENT\",\n                    \"quantity_unit\": \"TP: Stück\",\n                    \"storage_date\": \"2022-01-31T00:00:00.000000Z\"\n                }\n            }\n        ],\n        \"handling_unit_identifications\": [\n            {\n                \"handling_unit_identification_type\": \"SSCC\",\n                \"handling_unit_identification\": \"HU69000512\"\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -12275,7 +12275,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"external_task_state\": \"40\",\n  \"message_level\": \"1\",\n  \"message_id\": \"task-release-failed\",\n  \"designation_message_id\": \"The task could not be released\",\n  \"description_message_id\": \"Check the logs of the process for possible causes\",\n  \"assigned_resource\": \"DS:Picker\",\n  \"processed_by\": \"api-tester@pure-lox.com\",\n  \"loaded_handling_unit\":\"182977\",\n  \"positions\": [\n    {\n      \"task_position_id\": 1,\n      \"current_storage_zone\": \"DS:Wareneingang\",\n      \"current_storage_location\": \"DS:WE-Out\",\n      \"confirmed_quantity\": 150,\n      \"message_level\": \"1\",\n      \"message_id\": \"task-release-failed\",\n      \"designation_message_id\": \"The task could not be released\",\n      \"description_message_id\": \"Check the logs of the process for possible causes\"\n    }\n  ]\n}\n",
+              "raw": "{\n  \"external_task_state\": \"40\",\n  \"message_level\": \"1\",\n  \"message_id\": \"task-release-failed\",\n  \"designation_message_id\": \"The task could not be released\",\n  \"description_message_id\": \"Check the logs of the process for possible causes\",\n  \"assigned_resource\": \"DS:Picker\",\n  \"processed_by\": \"api-tester@system-provider.com\",\n  \"loaded_handling_unit\":\"182977\",\n  \"positions\": [\n    {\n      \"task_position_id\": 1,\n      \"current_storage_zone\": \"DS:Wareneingang\",\n      \"current_storage_location\": \"DS:WE-Out\",\n      \"confirmed_quantity\": 150,\n      \"message_level\": \"1\",\n      \"message_id\": \"task-release-failed\",\n      \"designation_message_id\": \"The task could not be released\",\n      \"description_message_id\": \"Check the logs of the process for possible causes\"\n    }\n  ]\n}\n",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -12823,7 +12823,7 @@
               "variable": [
                 {
                   "key": "client",
-                  "value": "DS-Online-Versandhandel"
+                  "value": "DEMO-CLIENT"
                 },
                 {
                   "key": "orderNumber",
@@ -12901,7 +12901,7 @@
     },
     {
       "key": "client",
-      "value": "DS-Online-Versandhandel"
+      "value": "DEMO-CLIENT"
     },
     {
       "key": "baseUrl",
@@ -12909,7 +12909,7 @@
     },
     {
       "key": "username",
-      "value": "api-tester@pure-lox.com"
+      "value": "api-tester@system-provider.com"
     },
     {
       "key": "password",
