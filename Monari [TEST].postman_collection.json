@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "5b9f009d-67b3-42c7-976c-1cb9c841ff14",
-    "name": "Monari [TEST]",
+    "name": "Demo [TEST]",
     "description": "OpenAPI documentation for the external systems interface.\n\n## Explanation of the description notation:\n\nIn the description, the designations **POST\\[\\], PATCH\\[\\]** and **GET\\[\\]** can be found in a uniform structure. The \\[X\\] in the square brackets means that this field is used in **POST/PATCH** or **GET**, depending on where the X was set.  \nIf it is a _readOnly_ field, then an **X** is set in the **GET** and is not used in **POST** or/and **PATCH**. The default is when **POST** and **PATCH** are _writeOnly_ (i.e. the field is used in both).  \nIn this case, the description is left empty.\n\n<u><b>Structure for link fields:</b></u>  \n**Link field:** _Alias, UUID_ | **<**Where to link to(name)**\\>** It is linked via an _Alias_ or a _UUID_.\n\nContact Support:  \nEmail: [info@system-provider.com](https://mailto:info@system-provider.com)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "40356664"
@@ -768,7 +768,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/TP: 123456789/",
+              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/master-data/v1/client/:client/item-master/DEMO-ITEM-123456789/",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -784,7 +784,7 @@
                 "client",
                 ":client",
                 "item-master",
-                "TP: 123456789",
+                "DEMO-ITEM-123456789",
                 ""
               ],
               "variable": [
@@ -4276,11 +4276,11 @@
                 },
                 {
                   "key": "itemMasterNumber",
-                  "value": "DS-0901-french"
+                  "value": "DEMO-0901-demo"
                 },
                 {
                   "key": "packagingNumber",
-                  "value": "DS-0901-french"
+                  "value": "DEMO-0901-demo"
                 },
                 {
                   "key": "packagingLevel",
@@ -4307,7 +4307,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"item_type\": \"0\", // [0 = Fertigprodukt, 1 = Set, 2 = Produktionsartikel, 3 = Komponente, 4 = Baugruppe, 5 = Packmittel]\n    \"item_number\": \"DS-1001-french\",\n    \"designation_a\": \"Article de test français dspa\", \n    \"base_quantity_unit\": \"TP: Stück\",\n    \"stock_characteristic_profile\": \"TP: Bestandsmerkmalprofil\"\n}",
+              "raw": "{\n    \"item_type\": \"0\", // [0 = Fertigprodukt, 1 = Set, 2 = Produktionsartikel, 3 = Komponente, 4 = Baugruppe, 5 = Packmittel]\n    \"item_number\": \"DEMO-1001-demo\",\n    \"designation_a\": \"Article de test français demo\", \n    \"base_quantity_unit\": \"DEMO:Stück\",\n    \"stock_characteristic_profile\": \"DEMO: Bestandsmerkmalprofil\"\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -4502,7 +4502,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n  {\n    \"item_type\": \"0\",\n    \"item_number\": \"1851\",\n    \"designation_a\": \"Etui Blancpain Rigide\",\n    \"base_quantity_unit\": \"STK\",\n    \"alias\": \"1851\",\n    \"stock_characteristic_profile\": \"DS: Bestandsmerkmalprofil\",\n    \"packaging_structures\": [\n      {\n        \"packaging_structure_number\": \"1851-Blancpain\",\n        \"description\": \"Verpackungseinheit Stück → Karton → Palette\",\n        \"alias\": \"1797-Blancpain\",\n        \"packaging_structure_positions\": [\n          {\n            \"packaging_level\": \"0\",\n            \"factor_base_quantity_unit\": \"1\"\n          },\n          {\n            \"packaging_level\": \"1\",\n            \"bundling_unit\": \"TP:KRT\",\n            \"factor_base_quantity_unit\": \"20\"\n          },\n          {\n            \"packaging_level\": \"4\",\n            \"bundling_unit\": \"TP: Europalette\",\n            \"factor_base_quantity_unit\": \"100\",\n            \"pickable\": false,\n            \"shippable\": true\n          }\n        ]\n      }\n    ]\n  }\n]\n\n ",
+              "raw": "[\n  {\n    \"item_type\": \"0\",\n    \"item_number\": \"1851\",\n    \"designation_a\": \"Etui Blancpain Rigide\",\n    \"base_quantity_unit\": \"STK\",\n    \"alias\": \"1851\",\n    \"stock_characteristic_profile\": \"DEMO: Bestandsmerkmalprofil\",\n    \"packaging_structures\": [\n      {\n        \"packaging_structure_number\": \"1851-Blancpain\",\n        \"description\": \"Verpackungseinheit Stück → Karton → Palette\",\n        \"alias\": \"1797-Blancpain\",\n        \"packaging_structure_positions\": [\n          {\n            \"packaging_level\": \"0\",\n            \"factor_base_quantity_unit\": \"1\"\n          },\n          {\n            \"packaging_level\": \"1\",\n            \"bundling_unit\": \"DEMO:KRT\",\n            \"factor_base_quantity_unit\": \"20\"\n          },\n          {\n            \"packaging_level\": \"4\",\n            \"bundling_unit\": \"DEMO:Europalette\",\n            \"factor_base_quantity_unit\": \"100\",\n            \"pickable\": false,\n            \"shippable\": true\n          }\n        ]\n      }\n    ]\n  }\n]\n\n ",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -4697,7 +4697,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-101\",\n        \"designation_a\": \"ds-test-16-12-101\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"1\",\n        \"item_number\": \"ds-test-16-12-102\",\n        \"designation_a\": \"ds-test-16-12-102\",\n        \"base_quantity_unit\": \"STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"2\",\n       \"item_number\": \"ds-test-16-12-103\",\n        \"designation_a\": \"ds-test-16-12-103\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"3\",\n        \"item_number\": \"ds-test-16-12-104\",\n        \"designation_a\": \"ds-test-16-12-104\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"4\",\n        \"item_number\": \"ds-test-16-12-105\",\n        \"designation_a\": \"ds-test-16-12-105\",\n         \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n     {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-106\",\n        \"designation_a\": \"ds-test-16-12-106\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-107\",\n        \"designation_a\": \"ds-test-16-12-107\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n     {\n        \"item_type\": \"2\",\n         \"item_number\": \"ds-test-16-12-108\",\n        \"designation_a\": \"ds-test-16-12-108\",\n         \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"5\",\n         \"item_number\": \"ds-test-16-12-109\",\n        \"designation_a\": \"ds-test-16-12-109\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"5\",\n         \"item_number\": \"ds-test-16-12-110\",\n        \"designation_a\": \"ds-test-16-12-110\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"4\",\n        \"item_number\": \"ds-test-16-12-111\",\n        \"designation_a\": \"ds-test-16-12-111\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n     {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-112\",\n        \"designation_a\": \"ds-test-16-12-112\",\n         \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n       \"item_number\": \"ds-test-16-12-113\",\n        \"designation_a\": \"ds-test-16-12-113\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-114\",\n        \"designation_a\": \"ds-test-16-12-114\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n       \"item_number\": \"ds-test-16-12-115\",\n        \"designation_a\": \"ds-test-16-12-115\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-116\",\n        \"designation_a\": \"ds-test-16-12-116\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-117\",\n        \"designation_a\": \"ds-test-16-12-117\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-118\",\n        \"designation_a\": \"ds-test-16-12-118\",\n         \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"ds-test-16-12-119\",\n        \"designation_a\": \"ds-test-16-12-119\",\n        \"base_quantity_unit\": \"DS: STK\",\n        \"stock_characteristic_profile\": \"DS: B_Profil\"\n    }\n]",
+              "raw": "[\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-101\",\n        \"designation_a\": \"demo-test-16-12-101\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"1\",\n        \"item_number\": \"demo-test-16-12-102\",\n        \"designation_a\": \"demo-test-16-12-102\",\n        \"base_quantity_unit\": \"STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"2\",\n       \"item_number\": \"demo-test-16-12-103\",\n        \"designation_a\": \"demo-test-16-12-103\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"3\",\n        \"item_number\": \"demo-test-16-12-104\",\n        \"designation_a\": \"demo-test-16-12-104\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"4\",\n        \"item_number\": \"demo-test-16-12-105\",\n        \"designation_a\": \"demo-test-16-12-105\",\n         \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n     {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-106\",\n        \"designation_a\": \"demo-test-16-12-106\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-107\",\n        \"designation_a\": \"demo-test-16-12-107\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n     {\n        \"item_type\": \"2\",\n         \"item_number\": \"demo-test-16-12-108\",\n        \"designation_a\": \"demo-test-16-12-108\",\n         \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"5\",\n         \"item_number\": \"demo-test-16-12-109\",\n        \"designation_a\": \"demo-test-16-12-109\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"5\",\n         \"item_number\": \"demo-test-16-12-110\",\n        \"designation_a\": \"demo-test-16-12-110\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"4\",\n        \"item_number\": \"demo-test-16-12-111\",\n        \"designation_a\": \"demo-test-16-12-111\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n     {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-112\",\n        \"designation_a\": \"demo-test-16-12-112\",\n         \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n       \"item_number\": \"demo-test-16-12-113\",\n        \"designation_a\": \"demo-test-16-12-113\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-114\",\n        \"designation_a\": \"demo-test-16-12-114\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n       \"item_number\": \"demo-test-16-12-115\",\n        \"designation_a\": \"demo-test-16-12-115\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-116\",\n        \"designation_a\": \"demo-test-16-12-116\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-117\",\n        \"designation_a\": \"demo-test-16-12-117\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-118\",\n        \"designation_a\": \"demo-test-16-12-118\",\n         \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    },\n    {\n        \"item_type\": \"0\",\n        \"item_number\": \"demo-test-16-12-119\",\n        \"designation_a\": \"demo-test-16-12-119\",\n        \"base_quantity_unit\": \"DEMO: STK\",\n        \"stock_characteristic_profile\": \"DEMO: B_Profil\"\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -5641,7 +5641,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n  {\n    \"contact_number\": \"255\",\n    \"salutation\": \"2\",\n    \"first_name\": \"Mario\",\n    \"last_name\": \"Basler\"\n    \n  },\n  {\n    \"contact_number\": \"256\",\n    \"salutation\": \"3\",\n    \"first_name\": \"Fredi\",\n    \"last_name\": \"Bobic\"\n    \n  }\n]",
+              "raw": "[\n  {\n    \"contact_number\": \"255\",\n    \"salutation\": \"2\",\n    \"first_name\": \"Max\",\n    \"last_name\": \"Demo-Kontakt-1\"\n    \n  },\n  {\n    \"contact_number\": \"256\",\n    \"salutation\": \"3\",\n    \"first_name\": \"Erika\",\n    \"last_name\": \"Demo-Kontakt-2\"\n    \n  }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -5837,7 +5837,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"salutation\": \"1\",\n    \"first_name\": \"Torsten(Patched)\",\n    \"last_name\": \"Legat(Patched)\",\n    \"contact_id\": \"3999\",\n    \"phone\": \"+491512355555555\",\n    \"mobile\": \"+48126257777777\",\n    \"alias\": \"tlegat3(Patched)\",\n    \"mail\": \"(Patched)sense@stuttgart.de\"\n}",
+              "raw": "{\n    \"salutation\": \"1\",\n    \"first_name\": \"Demo(Patched)\",\n    \"last_name\": \"Demo-Kontakt-3(Patched)\",\n    \"contact_id\": \"3999\",\n    \"phone\": \"+491512355555555\",\n    \"mobile\": \"+48126257777777\",\n    \"alias\": \"demo-kontakt-3(Patched)\",\n    \"mail\": \"(Patched)sense@stuttgart.de\"\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6203,7 +6203,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_number\": \"ds-french-90-01-2025\",\n    \"site\": \"DS-Musterlager\",\n    \"order_control_code_a\": \"DS:WA-Vollpalette\",\n    \"client\": \"DEMO-CLIENT\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": \"150\",\n            \"reference\": {\n                \"reference_value\": \"#DefaultCompany\",\n                \"reference_key\": \"HYPE\"\n            }\n        }\n    ]\n}",
+              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_number\": \"demo-order-90-01-2025\",\n    \"site\": \"demo-site-2\",\n    \"order_control_code_a\": \"DEMO:WA-Vollpalette\",\n    \"client\": \"DEMO-CLIENT\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"DEMO-ITEM-1012\",\n            \"quantity_unit\": \"DEMO:Stück\",\n            \"original_quantity\": \"150\",\n            \"reference\": {\n                \"reference_value\": \"#DefaultCompany\",\n                \"reference_key\": \"HYPE\"\n            }\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6383,7 +6383,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST1\",\n        \"site\": \"koblenz-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"meierfood\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST2\",\n        \"site\": \"koblenz-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"meierfood\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"22\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            },\n            {\n                \"order_position_number\": \"33\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST3\",\n        \"site\": \"koblenz-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"meierfood\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST4\",\n        \"site\": \"koblenz-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"meierfood\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST5\",\n        \"site\": \"koblenz-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"meierfood\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"DEMO-Order-minPOST1\",\n        \"site\": \"demo-site-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"demo-client-2\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"DEMO-Order-minPOST2\",\n        \"site\": \"demo-site-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"demo-client-2\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"22\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            },\n            {\n                \"order_position_number\": \"33\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST3\",\n        \"site\": \"demo-site-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"demo-client-2\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST4\",\n        \"site\": \"demo-site-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"demo-client-2\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    },\n    {\n        \"order_class\": \"product-incoming-order-class\",\n        \"order_number\": \"MF-Order-minPOST5\",\n        \"site\": \"demo-site-1\",\n        \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n        \"client\": \"demo-client-2\",\n        \"positions\": [\n            {\n                \"order_position_number\": \"1\",\n                \"item\": \"K-1000\",\n                \"quantity_unit\": \"STK\",\n                \"original_quantity\": \"10\"\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6563,7 +6563,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order_class\": \"product-outgoing-order-class\",\n    \"order_number\": \"MF-Order-POST-Min\",\n    \"site\": \"koblenz-1\",\n    \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n    \"client\": \"meierfood\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"K-1000\",\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": \"10\"\n        }\n    ]\n}",
+              "raw": "{\n    \"order_class\": \"product-outgoing-order-class\",\n    \"order_number\": \"DEMO-Order-POST-Min\",\n    \"site\": \"demo-site-1\",\n    \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n    \"client\": \"demo-client-2\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"K-1000\",\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": \"10\"\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6743,7 +6743,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order_class\": \"product-outgoing-order-class\",\n    \"order_number\": \"MF-Order-POST-Min\",\n    \"site\": \"koblenz-1\",\n    \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n    \"client\": \"meierfood\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"K-1000\",\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": \"10\"\n        }\n    ]\n}",
+              "raw": "{\n    \"order_class\": \"product-outgoing-order-class\",\n    \"order_number\": \"DEMO-Order-POST-Min\",\n    \"site\": \"demo-site-1\",\n    \"planned_processing_date\": \"2023-11-08T00:00:00Z\",\n    \"client\": \"demo-client-2\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"item\": \"K-1000\",\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": \"10\"\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -6925,7 +6925,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"client\": \"DEMO-CLIENT\",\n    \"site\": \"DS-Musterlager\",\n    \"order_number\": \"TEST-API-5000\",\n    \"order_control_code_a\": \"DS-WE\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"order_position_type\": \"0\",\n            \"item\": \"TP: 1012_DSPA\",\n            \"quantity_unit\": \"TP: Stück\",\n            \"original_quantity\": 150\n        }\n    ]\n}",
+              "raw": "{\n    \"client\": \"DEMO-CLIENT\",\n    \"site\": \"demo-site-2\",\n    \"order_number\": \"TEST-API-5000\",\n    \"order_control_code_a\": \"DEMO-WE\",\n    \"positions\": [\n        {\n            \"order_position_number\": \"1\",\n            \"order_position_type\": \"0\",\n            \"item\": \"DEMO-ITEM-1012\",\n            \"quantity_unit\": \"DEMO:Stück\",\n            \"original_quantity\": 150\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -7101,7 +7101,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_control_code_a\": \"WE Demo\",\n    \"client\": \"meierfood\",\n    \"positions\": [\n        {\n            \"order_position_number\": null,\n            \"item\": null,\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": null\n        }\n    ]\n}",
+              "raw": "{\n    \"order_class\": \"product-incoming-order-class\",\n    \"order_control_code_a\": \"WE Demo\",\n    \"client\": \"demo-client-2\",\n    \"positions\": [\n        {\n            \"order_position_number\": null,\n            \"item\": null,\n            \"quantity_unit\": \"STK\",\n            \"original_quantity\": null\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -7140,7 +7140,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 }
               ]
             },
@@ -7281,7 +7281,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n     \n    \"order_number\": \"DSPA-MBS\"\n\n}",
+              "raw": "{\n     \n    \"order_number\": \"DEMO-Order-MBS\"\n\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -7640,7 +7640,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 }
               ]
             },
@@ -7833,7 +7833,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 },
                 {
                   "key": "orderPositionNumber",
@@ -8014,7 +8014,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 },
                 {
                   "key": "orderPositionNumber",
@@ -8183,7 +8183,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 }
               ]
             },
@@ -8376,7 +8376,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "MF-Order-POST-Min"
+                  "value": "DEMO-Order-POST-Min"
                 },
                 {
                   "key": "textNumber",
@@ -9480,7 +9480,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/movement-data/v1/client/:client/orders/?site__alias=DS-Musterlager",
+              "raw": "{{baseUrl}}/apps/flowapps/:instanceID/wmx/wmx/interface/movement-data/v1/client/:client/orders/?site__alias=demo-site-2",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -9501,7 +9501,7 @@
               "query": [
                 {
                   "key": "site__alias",
-                  "value": "DS-Musterlager"
+                  "value": "demo-site-2"
                 }
               ],
               "variable": [
@@ -9593,7 +9593,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-111\",\n        \"order_control_code_a\": \"DS:Blocklager\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n          \"references\": [\n      {\n        \"reference_key\": \"Bild\",\n        \"reference_value\": \"Bild\"\n      }\n    ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth005\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 150,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"DS-0901-french\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"DS-0901-french\"\n                        }\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"demo-site-2\",\n        \"order_number\": \"DEMO-Order-111\",\n        \"order_control_code_a\": \"DEMO:Blocklager\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n          \"references\": [\n      {\n        \"reference_key\": \"Bild\",\n        \"reference_value\": \"Bild\"\n      }\n    ],\n        \"handling_units\": [\n            {\n                \"site\": \"demo-site-2\",\n                \"handling_unit_number\": \"DEMO-HU-005\",\n                \"handling_unit_type\": \"DEMO:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 150,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"DEMO-0901-demo\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"DEMO:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"DEMO-0901-demo\"\n                        }\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -9770,7 +9770,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"DS-Musterlager\",\n        \"order_number\": \"DSPA27052025-333\",\n        \"order_control_code_a\": \"DS-WE\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n        \"references\": [\n            {\n                \"reference_key\": \"Bild\",\n                \"reference_value\": \"Bild\"\n            }\n        ],\n        \"handling_units\": [\n            {\n                \"site\": \"DS-Musterlager\",\n                \"handling_unit_number\": \"DSPASouth008\",\n                \"handling_unit_type\": \"TP:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 1,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"TP: 1012_DSPA\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"TP:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"Volle Pal. Ziegelsteine\",\n                            \"stock_value_a\": \"85800\"\n                        },\n                        \"serial_numbers\": [\n                            {\n                                \"serial_number\": \"85800\"\n                            }\n                        ]\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"client\": \"DEMO-CLIENT\",\n        \"site\": \"demo-site-2\",\n        \"order_number\": \"DEMO-Order-333\",\n        \"order_control_code_a\": \"DEMO-WE\",\n        \"planned_delivery_date_time\": \"2025-03-31T00:00:00Z\",\n        \"delivery_note_date\": \"2022-01-31\",\n        \"references\": [\n            {\n                \"reference_key\": \"Bild\",\n                \"reference_value\": \"Bild\"\n            }\n        ],\n        \"handling_units\": [\n            {\n                \"site\": \"demo-site-2\",\n                \"handling_unit_number\": \"DEMO-HU-008\",\n                \"handling_unit_type\": \"DEMO:EPAL\",\n                \"handling_unit_segmentation_type\": \"no-segmentation\",\n                \"binding_structure\": \"1\",\n                \"handling_unit_positions\": [\n                    {\n                        \"quantity\": 1,\n                        \"position_number\": 1,\n                        \"quant\": {\n                            \"item\": \"DEMO-ITEM-1012\",\n                            \"client\": \"DEMO-CLIENT\",\n                            \"quantity_unit\": \"DEMO:Stück\",\n                            \"storage_date\": \"2025-06-22T11:27:00.000000Z\",\n                            \"packaging_structure\": \"Volle Pal. Ziegelsteine\",\n                            \"stock_value_a\": \"85800\"\n                        },\n                        \"serial_numbers\": [\n                            {\n                                \"serial_number\": \"85800\"\n                            }\n                        ]\n                    }\n                ],\n                \"handling_unit_references\": [\n                    {\n                        \"reference_key\": \"order_control_code_a\",\n                        \"reference_value\": \"002_080_986\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -9947,7 +9947,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "[\n    {\n        \"handling_unit_number\": \"HU-DSPA-TEST\",\n        \"handling_unit_class\": \"avis-handling-unit\",\n        \"handling_unit_type\": \"TP: EPAL\",\n        \"site\": \"DS-Musterlager\",\n        \"length\": 30,\n        \"width\": 20,\n        \"height\": 15,\n        \"volume\": 9000,\n        \"storage_zone\":\"DS:Wareneingang\",\n        \"storage_location\": \"DS:WE-Out\",\n        \"handling_unit_positions\": [\n            {\n                \"position_id\": 1,\n                \"position_number\": \"1\",\n                \"quantity\": 150,\n                \"quant\": {\n                    \"item\": \"TP: 1012_DSPA\",\n                    \"client\": \"DEMO-CLIENT\",\n                    \"quantity_unit\": \"TP: Stück\",\n                    \"storage_date\": \"2022-01-31T00:00:00.000000Z\"\n                }\n            }\n        ],\n        \"handling_unit_identifications\": [\n            {\n                \"handling_unit_identification_type\": \"SSCC\",\n                \"handling_unit_identification\": \"HU69000512\"\n            }\n        ]\n    }\n]",
+              "raw": "[\n    {\n        \"handling_unit_number\": \"HU-DEMO-TEST\",\n        \"handling_unit_class\": \"avis-handling-unit\",\n        \"handling_unit_type\": \"DEMO:EPAL\",\n        \"site\": \"demo-site-2\",\n        \"length\": 30,\n        \"width\": 20,\n        \"height\": 15,\n        \"volume\": 9000,\n        \"storage_zone\":\"DEMO:Wareneingang\",\n        \"storage_location\": \"DEMO:WE-Out\",\n        \"handling_unit_positions\": [\n            {\n                \"position_id\": 1,\n                \"position_number\": \"1\",\n                \"quantity\": 150,\n                \"quant\": {\n                    \"item\": \"DEMO-ITEM-1012\",\n                    \"client\": \"DEMO-CLIENT\",\n                    \"quantity_unit\": \"DEMO:Stück\",\n                    \"storage_date\": \"2022-01-31T00:00:00.000000Z\"\n                }\n            }\n        ],\n        \"handling_unit_identifications\": [\n            {\n                \"handling_unit_identification_type\": \"SSCC\",\n                \"handling_unit_identification\": \"HU69000512\"\n            }\n        ]\n    }\n]",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -9987,7 +9987,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "dspa-02-2025"
+                  "value": "demo-02-2025"
                 }
               ]
             },
@@ -11378,7 +11378,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/apps/flowapps/{{instanceID}}/wmx/wmx/interface/v1/client/:client/stocksbalance/?select_hu_classes=Lager-HU&select_item_numbers=TP: 1012_DSPA&group_by={{item_number}},{{site}}&order_by=item_number,site",
+              "raw": "{{baseUrl}}/apps/flowapps/{{instanceID}}/wmx/wmx/interface/v1/client/:client/stocksbalance/?select_hu_classes=Lager-HU&select_item_numbers=DEMO-ITEM-1012&group_by={{item_number}},{{site}}&order_by=item_number,site",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -11402,7 +11402,7 @@
                 },
                 {
                   "key": "select_item_numbers",
-                  "value": "TP: 1012_DSPA"
+                  "value": "DEMO-ITEM-1012"
                 },
                 {
                   "key": "group_by",
@@ -11612,7 +11612,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"handling_unit\": \"180616\",\n    \"site\": \"DS-Musterlager\",\n    \"storage_zone\": \"DS:Blocklager\",\n    \"storage_location\": \"DS:Blockplatz1\",\n    \"gross_weight\": \"150\",\n    \"width\": \"150\",\n    \"height\": \"100\",\n    \"length\": \"100\",\n    \"volume\": \"100\"\n}",
+              "raw": "{\n    \"handling_unit\": \"180616\",\n    \"site\": \"demo-site-2\",\n    \"storage_zone\": \"DEMO:Blocklager\",\n    \"storage_location\": \"DEMO:Blockplatz1\",\n    \"gross_weight\": \"150\",\n    \"width\": \"150\",\n    \"height\": \"100\",\n    \"length\": \"100\",\n    \"volume\": \"100\"\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -11925,7 +11925,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"external_task_state\": \"90\",\n    \"message_id\": \"task-release-failed\",\n    \"designation_message_id\": \"The task could not be released\",\n    \"description_message_id\": \"Check the logs of the process for possible causes\",\n    \"processed_by\": \"DSPA\",\n    \"loaded_handling_unit\":\"187685\",\n    \"positions\": [\n        {\n            \"task_position_id\": 1,\n            \"confirmed_quantity\": \"1\",\n            \"message_level\": \"0\",\n            \"designation_message_id\": \"task-complete\",\n            \"description_message_id\": \"Vorgang abgeschlossen\"\n        }\n   ]\n}",
+              "raw": "{\n    \"external_task_state\": \"90\",\n    \"message_id\": \"task-release-failed\",\n    \"designation_message_id\": \"The task could not be released\",\n    \"description_message_id\": \"Check the logs of the process for possible causes\",\n    \"processed_by\": \"DEMO\",\n    \"loaded_handling_unit\":\"187685\",\n    \"positions\": [\n        {\n            \"task_position_id\": 1,\n            \"confirmed_quantity\": \"1\",\n            \"message_level\": \"0\",\n            \"designation_message_id\": \"task-complete\",\n            \"description_message_id\": \"Vorgang abgeschlossen\"\n        }\n   ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -12100,7 +12100,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"external_task_state\": \"90\",\n    \"message_level\": \"0\",\n    \"designation_message_id\": \"dspa\",\n    \"description_message_id\": \"test-dspa\",\n    \"assigned_resource\": \"DS:Picker\",\n    \"processed_by\": \"Tommy\",\n    \"positions\": [\n        {\n            \"task_position_id\": 1,\n            \"confirmed_quantity\": 150,\n            \"message_level\": \"0\",\n            \"designation_message_id\": \"test-dspa\"\n        }\n    ]\n}",
+              "raw": "{\n    \"external_task_state\": \"90\",\n    \"message_level\": \"0\",\n    \"designation_message_id\": \"demo\",\n    \"description_message_id\": \"test-demo\",\n    \"assigned_resource\": \"DEMO:Picker\",\n    \"processed_by\": \"Tommy\",\n    \"positions\": [\n        {\n            \"task_position_id\": 1,\n            \"confirmed_quantity\": 150,\n            \"message_level\": \"0\",\n            \"designation_message_id\": \"test-demo\"\n        }\n    ]\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -12275,7 +12275,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"external_task_state\": \"40\",\n  \"message_level\": \"1\",\n  \"message_id\": \"task-release-failed\",\n  \"designation_message_id\": \"The task could not be released\",\n  \"description_message_id\": \"Check the logs of the process for possible causes\",\n  \"assigned_resource\": \"DS:Picker\",\n  \"processed_by\": \"api-tester@system-provider.com\",\n  \"loaded_handling_unit\":\"182977\",\n  \"positions\": [\n    {\n      \"task_position_id\": 1,\n      \"current_storage_zone\": \"DS:Wareneingang\",\n      \"current_storage_location\": \"DS:WE-Out\",\n      \"confirmed_quantity\": 150,\n      \"message_level\": \"1\",\n      \"message_id\": \"task-release-failed\",\n      \"designation_message_id\": \"The task could not be released\",\n      \"description_message_id\": \"Check the logs of the process for possible causes\"\n    }\n  ]\n}\n",
+              "raw": "{\n  \"external_task_state\": \"40\",\n  \"message_level\": \"1\",\n  \"message_id\": \"task-release-failed\",\n  \"designation_message_id\": \"The task could not be released\",\n  \"description_message_id\": \"Check the logs of the process for possible causes\",\n  \"assigned_resource\": \"DEMO:Picker\",\n  \"processed_by\": \"api-tester@system-provider.com\",\n  \"loaded_handling_unit\":\"182977\",\n  \"positions\": [\n    {\n      \"task_position_id\": 1,\n      \"current_storage_zone\": \"DEMO:Wareneingang\",\n      \"current_storage_location\": \"DEMO:WE-Out\",\n      \"confirmed_quantity\": 150,\n      \"message_level\": \"1\",\n      \"message_id\": \"task-release-failed\",\n      \"designation_message_id\": \"The task could not be released\",\n      \"description_message_id\": \"Check the logs of the process for possible causes\"\n    }\n  ]\n}\n",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -12765,7 +12765,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "[\r\n  {\r\n    \"site\": \"DS-Musterlager\",\r\n    \"freight\": \"209356\",\r\n    \"freight_targets\": [{\"freight_location\":\"DSPA:Verladetor 10\"}]\r\n  },\r\n  {\r\n    \"site\": \"DS-Musterlager\",\r\n    \"freight\": \"209353\",\r\n    \"freight_targets\": [{\"freight_location\":\"DSPA:Verladetor 10\", \"driver\":\"Mustermann\"}]\r\n  }\r\n]",
+              "raw": "[\r\n  {\r\n    \"site\": \"demo-site-2\",\r\n    \"freight\": \"209356\",\r\n    \"freight_targets\": [{\"freight_location\":\"DEMO:Verladetor 10\"}]\r\n  },\r\n  {\r\n    \"site\": \"demo-site-2\",\r\n    \"freight\": \"209353\",\r\n    \"freight_targets\": [{\"freight_location\":\"DEMO:Verladetor 10\", \"driver\":\"Mustermann\"}]\r\n  }\r\n]",
               "options": {
                 "raw": {
                   "language": "json"
@@ -12827,7 +12827,7 @@
                 },
                 {
                   "key": "orderNumber",
-                  "value": "DSPA23042026-009"
+                  "value": "DEMO-Order-009"
                 }
               ]
             }
